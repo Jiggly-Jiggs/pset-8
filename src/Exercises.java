@@ -15,10 +15,24 @@ public class Exercises {
 	}
 
 	public String[] endsMeet(String[] values, int n) {
-		
-		// write your code here
 
-		return null;	// default return value to ensure compilation
+		// write your code here
+		if (values == null || values.length < n || n < 0) {
+			return new String[0];
+		}
+
+		String[] conjuction = new String[n * 2];
+		for (int i = 0; i < n; i++) {
+			conjuction[i] = values[i];
+		}
+
+		int j = n;
+		for (int i = values.length - n; i < values.length; i++) {
+			conjuction[j] = values [i];
+			j++;
+		}
+
+		return conjuction;	// default return value to ensure compilation
 	}
 
 	public int difference(int[] numbers) {
