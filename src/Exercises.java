@@ -38,7 +38,7 @@ public class Exercises {
 	public int difference(int[] numbers) {
 
 		// write your code here
-		if (numbers == null || numbers.length % 2 == 0 || numbers.length < 3) {
+		if (numbers == null || numbers.length < 1) {
 			return -1;
 		}
 
@@ -64,7 +64,11 @@ public class Exercises {
 	}
 
 	public double biggest(double[] numbers) {
+
 		// write your code here
+		if (numbers == null || numbers.length % 2 == 0 || numbers.length < 3) {
+			
+		}
 
 		return -1;		// default return value to ensure compilation
 	}
