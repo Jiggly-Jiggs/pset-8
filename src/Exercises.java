@@ -1,24 +1,13 @@
 public class Exercises {
 
-	public static void main(String[] args) {
-
-		ProblemSet5 ps = new ProblemSet5();
-		// System.out.println(ps.commonEnd());
-		// System.out.println(ps.endsMeet());
-		// System.out.println(ps.difference());
-		// System.out.println(ps.biggest());
-		// System.out.println(ps.middle());
-		// System.out.println(ps.increasing());
-		// System.out.println(ps.everywhere());
-		// System.out.println(ps.consecutive());
-		// System.out.println(ps.balance());
-		// System.out.println(ps.clumps());
-
-	}
-
 	public boolean commonEnd(int[] a, int[] b) {
+
 		if (a == null || a.length == 0 || b == null || b.length == 0) {
 			return false;
+		}
+
+		if (a[0] == b[0] || a[a.length - 1] == b[b.length - 1]) {
+			return true;
 		}
 
 		// write your code here
