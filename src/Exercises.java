@@ -6,16 +6,16 @@ public class Exercises {
 			return false;
 		}
 
+		// write your code here
 		if (a[0] == b[0] || a[a.length - 1] == b[b.length - 1]) {
 			return true;
 		}
-
-		// write your code here
 
 		return false;	// default return value to ensure compilation
 	}
 
 	public String[] endsMeet(String[] values, int n) {
+		
 		// write your code here
 
 		return null;	// default return value to ensure compilation
