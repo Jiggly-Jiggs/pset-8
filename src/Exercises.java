@@ -67,10 +67,23 @@ public class Exercises {
 
 		// write your code here
 		if (numbers == null || numbers.length % 2 == 0 || numbers.length < 3) {
-			
+			return -1;
 		}
 
-		return -1;		// default return value to ensure compilation
+		int middleNum = (int)(Math.ceil(numbers.length / 2));
+		double max = -1;
+
+		for (int i = 0; i < numbers.length; i++) {
+			if (numbers[i] < 0) {
+					return -1;
+				}
+
+				if ((i == 0 || i == numbers.length - 1 || i == middleNum) && numbers[i] > max) {
+					max = numbers[i];
+				}
+			}
+
+		return max;
 	}
 
 	public String[] middle(String[] values) {
