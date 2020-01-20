@@ -159,6 +159,15 @@ public class Exercises {
 			return false;
 		}
 
+		for (int i = 1; i < numbers.length - 1; i++) {
+			if (numbers[i - 1] % 2 == 0 && numbers[i] % 2 == 0 && numbers[i + 1] % 2 == 0) {
+				return true;
+			} else if (numbers[i - 1] % 2 == 1 && numbers[i] % 2 == 1 && numbers[i + 1] % 2 == 1) {
+				return true;
+			}
+		}
+
+
 		return false;	// default return value to ensure compilation
 	}
 
