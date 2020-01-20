@@ -199,8 +199,36 @@ public class Exercises {
 	}
 
 	public int clumps(String[] values) {
-		// write your code here
 
-		return -1;		// default return value to ensure compilation
-	}
+		// write your code here
+		if (values == null) {
+			return -1;
+		}
+
+		for (int i = 0; i < values.length; i++) {
+			if (values[i] == null) {
+				return -1;
+			}
+		}
+
+		boolean same = false;
+		boolean lastSame = false;
+		String last = "";
+		int clumps = 0;
+
+		for (int i = 0; i < values.length; i++) {
+			if (last.equals(values[i])) {
+				same = true;
+				if (lastSame != true) {
+					clumps++;
+				}
+			} else {
+				same = false;
+			}
+			last = values[i];
+			lastSame = same;
+		}
+
+		return clumps;
+		}
 }
