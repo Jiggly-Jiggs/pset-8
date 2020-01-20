@@ -11,7 +11,7 @@ public class Exercises {
 			return true;
 		}
 
-		return false;	// default return value to ensure compilation
+		return false;
 	}
 
 	public String[] endsMeet(String[] values, int n) {
@@ -32,7 +32,7 @@ public class Exercises {
 			j++;
 		}
 
-		return conjuction;	// default return value to ensure compilation
+		return conjuction;
 	}
 
 	public int difference(int[] numbers) {
@@ -87,15 +87,29 @@ public class Exercises {
 	}
 
 	public String[] middle(String[] values) {
-		// write your code here
 
-		return null;	// default return value to ensure compilation
+		// write your code here
+		if (values == null || values.length % 2 == 0 || values.length < 3) {
+			return new String[0];
+		}
+		for (int i = 0; i < values.length; i++) {
+			if (values[i] == null) {
+				return new String[0];
+			}
+		}
+
+		int middleNum = (int)(Math.ceil(values.length / 2));
+		String[] middleNums = {values[middleNum - 1], values[middleNum], values [middleNum + 1]};
+
+		return middleNums;
+
 	}
 
 	public boolean increasing(int[] numbers) {
-		// write your code here
 
-		return false;	// default return value to ensure compilation
+		// write your code here
+		
+		return false; // default return value to ensure compilation
 	}
 
 	public boolean everywhere(int[] numbers, int x) {
